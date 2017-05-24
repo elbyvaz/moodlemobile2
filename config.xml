@@ -77,8 +77,8 @@
 
     <!-- <gap:plugin name="org.apache.cordova.camera" /> -->
     <!-- <gap:plugin name="org.apache.cordova.media-capture" /> -->
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.device" version="0.2.8"/>
+    <!-- <gap:plugin name="org.apache.cordova.console" /> -->
+    <!-- <gap:plugin name="org.apache.cordova.device" version="0.2.8"/>
     <gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.globalization" />
@@ -88,7 +88,8 @@
     <gap:plugin name="com.phonegap.plugin.statusbar" />
 
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
-    <gap:plugin name="net.tunts.webintent" />
+    <gap:plugin name="net.tunts.webintent" /> -->
+        
     <gap:plugin name="nl.x-services.plugins.launchmyapp">
         <param name="URL_SCHEME" value="moodlemobile" />
     </gap:plugin>
