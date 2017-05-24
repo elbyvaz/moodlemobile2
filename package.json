@@ -1,7 +1,7 @@
 {
-  "name": "mm2",
-  "version": "1.0.0",
-  "description": "mm2: An Ionic project",
+  "name": "Moodle Mobile Plataforma",
+  "version": "2.0",
+  "description": "Moodle Mobile Plataforma",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",
