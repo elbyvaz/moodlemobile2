@@ -133,7 +133,7 @@
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
         
     
-    
+    <gap:plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git" source="git" />
     <gap:plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
 
     <gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
