@@ -120,7 +120,7 @@
     <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.1.2" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
-    <gap:plugin name="net.tunts.webintent" source="pgb" />
+    <plugin name="net.tunts.webintent" spec="0.2.1" source="pgb" />
 
     <gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
         <param name="SENDER_ID" value="learn-moodle-1159" />
