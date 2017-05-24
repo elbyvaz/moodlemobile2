@@ -20,7 +20,7 @@
     "extra_js": [],
     "demo_sites": [],
     "notifications_enabled": true,
-    "gcmpn": "694767596569", /* alterar esse valor apenas se vc usar sua propria Google Push infrastructure) */
+    "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile",
     "siteurl": "https://www.ilabora.com.br/plataforma/",
     "skipssoconfirmation": "false",
