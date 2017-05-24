@@ -5,10 +5,10 @@
         id        = "plataforma.br.com.ilabora"
         versionCode = "2"
         version   = "2.0">
-    <name>Moodle Mobile iLabora</name>
+    <name>Moodle Mobile Plataforma</name>
 
     <description>
-        Moodle Mobile iLabora
+        Moodle Mobile Plataforma
     </description>
 
     <author href="https://www.ilabora.com.br/plataforma/" email="elbyvaz@gmail.com">
@@ -16,10 +16,23 @@
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>2.0</string>
+        <string>1.2</string>
     </gap:config-file>
-        
-    <preference name="android-minSdkVersion" value="5" />
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+
+    <access origin="*" />
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="mailto:*" launch-external="yes" />
+    <access origin="geo:*" launch-external="yes" />
+
+    <allow-navigation href="cdvfile:*" />
+    <allow-navigation href="content:*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="*" />
+
+    <allow-intent href="*" />
 
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="orientation"      value="default" />
@@ -30,72 +43,96 @@
     <preference name="prerendered-icon" value="true" />
     <preference name="load-url-timeout" value="60000" />
 
-    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    </feature>
+
+    <preference name="AndroidPersistentFileLocation"    value="Compatibility" />
     <preference name="iosPersistentFileLocation" value="Compatibility" />
 
     <icon src="icon.png" />
-    <icon src="img/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="img/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="img/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="img/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
-    <icon src="img/icon/android/icon-144-xxhdpi.png"  gap:platform="android"    gap:density="xxhdpi" />
+    <gap:splash src="splash.png" />
 
-    <icon src="img/icon/ios/icon-small.png" gap:platform="ios" width="29" height="29" />
-    <icon src="img/icon/ios/icon-small@2x.png" gap:platform="ios" width="58" height="58" />
-    <icon src="img/icon/ios/icon-small@3x.png" gap:platform="ios" width="87" height="87" />
+    <platform name="android">
+        <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
+        <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
+        <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
+        <icon src="resources/android/icon/drawable-xhdpi-icon.png" density="xhdpi"/>
+        <icon src="resources/android/icon/drawable-xxhdpi-icon.png" density="xxhdpi"/>
+        <icon src="resources/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+        <splash src="resources/android/splash/drawable-land-ldpi-screen.png" qualifier="land-ldpi"/>
+        <splash src="resources/android/splash/drawable-land-mdpi-screen.png" qualifier="land-mdpi"/>
+        <splash src="resources/android/splash/drawable-land-hdpi-screen.png" qualifier="land-hdpi"/>
+        <splash src="resources/android/splash/drawable-land-xhdpi-screen.png" qualifier="land-xhdpi"/>
+        <splash src="resources/android/splash/drawable-land-xxhdpi-screen.png" qualifier="land-xxhdpi"/>
+        <splash src="resources/android/splash/drawable-land-xxxhdpi-screen.png" qualifier="land-xxxhdpi"/>
+        <splash src="resources/android/splash/drawable-port-ldpi-screen.png" qualifier="port-ldpi"/>
+        <splash src="resources/android/splash/drawable-port-mdpi-screen.png" qualifier="port-mdpi"/>
+        <splash src="resources/android/splash/drawable-port-hdpi-screen.png" qualifier="port-hdpi"/>
+        <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" qualifier="port-xhdpi"/>
+        <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" qualifier="port-xxhdpi"/>
+        <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" qualifier="port-xxxhdpi"/>
+    </platform>
 
-    <icon src="img/icon/ios/icon-40.png"            gap:platform="ios"      width="40" height="40" />
-    <icon src="img/icon/ios/icon-40@2x.png"         gap:platform="ios"      width="80" height="80" />
-    <icon src="img/icon/ios/icon-60.png" gap:platform="ios" width="60" height="60" />
-    <icon src="img/icon/ios/icon-60@2x.png" gap:platform="ios" width="120" height="120" />
-    <icon src="img/icon/ios/icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+    <platform name="ios">
+        <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
+        <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
+        <icon src="resources/ios/icon/icon-40.png" width="40" height="40"/>
+        <icon src="resources/ios/icon/icon-40@2x.png" width="80" height="80"/>
+        <icon src="resources/ios/icon/icon-50.png" width="50" height="50"/>
+        <icon src="resources/ios/icon/icon-50@2x.png" width="100" height="100"/>
+        <icon src="resources/ios/icon/icon-60.png" width="60" height="60"/>
+        <icon src="resources/ios/icon/icon-60@2x.png" width="120" height="120"/>
+        <icon src="resources/ios/icon/icon-60@3x.png" width="180" height="180"/>
+        <icon src="resources/ios/icon/icon-72.png" width="72" height="72"/>
+        <icon src="resources/ios/icon/icon-72@2x.png" width="144" height="144"/>
+        <icon src="resources/ios/icon/icon-76.png" width="76" height="76"/>
+        <icon src="resources/ios/icon/icon-76@2x.png" width="152" height="152"/>
+        <icon src="resources/ios/icon/icon-small.png" width="29" height="29"/>
+        <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58"/>
+        <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87"/>
+        <splash src="resources/ios/splash/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="resources/ios/splash/Default-667h.png" width="750" height="1334"/>
+        <splash src="resources/ios/splash/Default-736h.png" width="1242" height="2208"/>
+        <splash src="resources/ios/splash/Default-Landscape-736h.png" width="2208" height="1242"/>
+        <splash src="resources/ios/splash/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="resources/ios/splash/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="resources/ios/splash/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="resources/ios/splash/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="resources/ios/splash/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
+    </platform>
 
-    <icon src="img/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="img/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="img/icon/ios/icon-76.png"            gap:platform="ios"        width="76" height="76" />
-    <icon src="img/icon/ios/icon-40@3x.png"         gap:platform="ios"        width="120" height="120" />
-    <icon src="img/icon/ios/icon-76@2x.png"         gap:platform="ios"        width="152" height="152" />
-    <icon src="img/icon/ios/icon-57@2x.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="img/icon/ios/icon-72@2x.png"         gap:platform="ios"        width="144" height="144" />
+    <gap:plugin name="cordova-plugin-camera" source="npm" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-file" source="npm" />
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
+    <gap:plugin name="cordova-plugin-globalization" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" />
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.1.2" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    
 
-    <gap:splash src="img/splash/android/android_ldpi_portrait.png.png" gap:platform="android" gap:density="ldpi"/>
-    <gap:splash src="img/splash/android/android_mdpi_portrait.png" gap:platform="android" gap:density="mdpi"/>
-    <gap:splash src="img/splash/android/android_hdpi_portrait.png" gap:platform="android" gap:density="hdpi"/>
-    <gap:splash src="img/splash/android/android_xhdpi_portrait.png" gap:platform="android" gap:density="xhdpi"/>
-
-    <gap:splash src="img/splash/ios/iphone_portrait.png" gap:platform="ios" width="320" height="480"/>
-    <gap:splash src="img/splash/ios/iphone_retina_portrait.png" gap:platform="ios" width="640" height="960"/>
-    <gap:splash src="img/splash/ios/iphone5.png" gap:platform="ios" width="640" height="1136" />
-
-    <gap:splash src="img/splash/ios/ipad_portrait.png" gap:platform="ios" width="768" height="1004"/>
-    <gap:splash src="img/splash/ios/ipad_landscape.png" gap:platform="ios" width="1024" height="748"/>
-    <gap:splash src="img/splash/ios/ipad_retina_portrait.png" gap:platform="ios" width="1536" height="2008"/>
-    <gap:splash src="img/splash/ios/ipad_retina_landscape.png" gap:platform="ios" width="2048" height="1496"/>
-
-    <gap:platform name="ios" />
-    <gap:platform name="android" />
-
-    <!-- <gap:plugin name="org.apache.cordova.camera" /> -->
-    <!-- <gap:plugin name="org.apache.cordova.media-capture" /> -->
-    <!-- <gap:plugin name="org.apache.cordova.console" /> -->
-    <!-- <gap:plugin name="org.apache.cordova.device" version="0.2.8"/>
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
-    <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
-
-    <gap:plugin name="com.phonegap.plugins.pushplugin" />
-    <gap:plugin name="net.tunts.webintent" />
-        
-    <gap:plugin name="nl.x-services.plugins.launchmyapp">
-        <param name="URL_SCHEME" value="moodlemobile" />
+    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
+        <param name="SENDER_ID" value="learn-moodle-1159" />
     </gap:plugin>
-    <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
-    <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.5" />
-    <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" /> -->
+    <gap:plugin name="net.tunts.webintent" />
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+        <param name="URL_SCHEME" value="learnmoodle" />
+    </gap:plugin>
+    <gap:plugin name="ionic-plugin-keyboard" source="npm" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" source="npm" />
+    <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
+    <gap:plugin name="cordova-plugin-zip" source="npm" />
 
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="false" />
@@ -491,6 +528,10 @@
         </array>
     </gap:config-file>
 
-    <access origin="*" />
+    <gap:config-file platform="ios" parent="NSAppTransportSecurity" mode="add">
+        <dict>
+            <key>NSAllowsArbitraryLoads</key><true/>
+        </dict>
+    </gap:config-file>
 
 </widget>
